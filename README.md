@@ -20,7 +20,7 @@ Evaluated on **2,133 unseen test reviews**:
 To ensure GitHub repository size efficiency and seamless project reproducibility, the fine-tuned
 DistilBERT weights and tokenizer configurations are hosted directly on the Hugging Face Hub:
 ```
-- **Hugging Face Model Hub:** [Rexxxxxtxx/rotten-tomatoes-distilbert-sentiment](https://huggingface.co/Rexxxxxtxx/rotten-tomatoes-distilbert-sentiment/tree/main)
+- **Hugging Face Model Hub:** [Hugging Face Rotten Tomatoes AI Sentiment](https://huggingface.co/Rexxxxxtxx/rotten-tomatoes-distilbert-sentiment/tree/main)
 
 ---
 ```markdown
