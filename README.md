@@ -1,37 +1,78 @@
-# Rotten Tomatoes AI Sentiment Classifier
+```markdown
+# Rotten Tomatoes AI Sentiment Classification Pipeline
 
-**Track:** AI + Social Good / NLP  
-**Team:** High School AI Builder  
-
-## The problem
-Manually processing thousands of customer reviews, financial feedback notes, or movie comments is slow and inefficient. Organizations and platforms need automated tools to instantly categorize large volumes of text sentiment to understand user reception at scale.
-
-## What I built
-An end-to-end local natural language processing pipeline. A user inputs a raw review text sentence, and the system tokenizes the string, processes it through a fine-tuned deep learning transformer model, and outputs a clear binary classification label (**Positive** or **Negative**) along with an evaluation confidence score.
-
-## How it works
-* **Data:** Utilized a custom split of Rotten Tomatoes user review comments (`train_reviews.csv` and `test_reviews.csv`), featuring balanced negative and positive training rows[cite: 14].
-* **Model:** Fine-tuned the pre-trained `distilbert-base-uncased` transformer model from Hugging Face[cite: 8, 13] using PyTorch and Hugging Face `Trainer` API[cite: 8], leveraging local NVIDIA RTX 4070 GPU hardware for efficient execution[cite: 13].
-* **Cleaning & Preprocessing:** Applied tokenization, dynamic batch padding, and strict train-test separation to prevent data leakage[cite: 14, 17].
-
-## Results
-* **Baseline vs Model:** Compared against a simple baseline, our fine-tuned DistilBERT model achieved an overall accuracy of **86.03%** and a weighted **F1-Score of 0.8603** on unseen held-out test data[cite: 11, 16].
-* **Where it fails:** The model occasionally misclassifies highly sarcastic, subtle, or multi-layered reviews where explicit sentiment keywords are absent or contradictory.
-
-## What we'd do next
-1. Expand the dataset to handle multi-class granular ratings (e.g., 1-to-5 stars instead of strict binary sentiment).
-2. Wrap the inference scripts into an interactive local web application dashboard using **Streamlit**[cite: 8, 13].
-
-## Sources
-* **Datasets:** Rotten Tomatoes user review split files (`train_reviews.csv`, `test_reviews.csv`)[cite: 14].
-* **Pretrained Models:** Hugging Face `distilbert-base-uncased` model checkpoint[cite: 8, 13].
-* **Libraries:** PyTorch, Hugging Face Transformers & Datasets, Scikit-Learn, Pandas[cite: 8].
+A production-grade Natural Language Processing pipeline built using PyTorch, Hugging Face Transformers (**DistilBERT**), and accelerated locally via NVIDIA CUDA. Designed for high accuracy and rapid text inference on customer review datasets.
 
 ---
 
-## How to Run This Project Locally
+##  Model Performance & Evaluation Metrics
+Evaluated on **2,133 unseen test reviews**:
 
-### 1. Clone the Repository
+- **Overall Test Accuracy:** `86.03%`
+- **Class Metrics:**
+  - **Negative:** Precision: `0.86` | Recall: `0.86` | F1-Score: `0.86`
+  - **Positive:** Precision: `0.86` | Recall: `0.86` | F1-Score: `0.86`
+
+---
+
+##  Project Structure
+```text
+NLP/
+│
+├── rotten_tomatoes_train_test/ # Dataset folder (train_reviews.csv / test_reviews.csv splits)
+├── train_nlp.py                # Tokenization, Hugging Face Trainer setup, training loop & artifact saving
+├── test_model.py               # Single-string inference script loading the saved model weights
+├── evaluate_model.py           # Comprehensive evaluation script (Accuracy, F1-Score, Classification Report)
+├── requirements.txt            # Locked python package dependencies
+├── .gitignore                  # Git exclusion rules for large model weights and checkpoints
+└── README.md                   # Project documentation & metrics summary
+
+```
+
+---
+
+## How to Run Locally
+
+### 1. Install Dependencies
+
 ```bash
-git clone [https://github.com/liktb/NLP-sentiment-analysis.git](https://github.com/liktb/NLP-sentiment-analysis.git)
-cd NLP
+pip install -r requirements.txt
+
+```
+
+### 2. Train the Model
+
+*(Fine-tunes DistilBERT locally on your GPU using the training split)*
+
+```bash
+python train_nlp.py
+
+```
+
+### 3. Evaluate Model Performance
+
+Run evaluation across the test set to generate accuracy and F1 metrics:
+
+```bash
+python evaluate_model.py
+
+```
+
+### 4. Run Single-Comment Prediction
+
+Test custom review text strings against your saved local model:
+
+```bash
+python test_model.py
+
+```
+
+---
+
+## Author
+
+* **Pipeline Architecture, Training & Execution:** [Ryan Dinto](https://github.com/liktb)
+
+```
+
+```
