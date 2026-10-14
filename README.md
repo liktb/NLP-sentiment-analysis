@@ -1,7 +1,8 @@
 ```markdown
 # Rotten Tomatoes AI Sentiment Classification Pipeline
 
-A production-grade Natural Language Processing pipeline built using PyTorch, Hugging Face Transformers (**DistilBERT**), and accelerated locally via NVIDIA CUDA. Designed for high accuracy and rapid text inference on customer review datasets.
+A production-grade Natural Language Processing pipeline built using PyTorch, Hugging Face Transformers (**DistilBERT**), 
+and accelerated locally via NVIDIA CUDA. Designed for high accuracy and rapid text inference on customer review datasets.
 
 ---
 
