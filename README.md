@@ -1,7 +1,8 @@
 ```markdown
 # Rotten Tomatoes AI Sentiment Classification Pipeline
 
-A production-grade Natural Language Processing pipeline built using PyTorch, Hugging Face Transformers (**DistilBERT**), and accelerated locally via NVIDIA CUDA. Designed for high accuracy and rapid text inference on customer review datasets.
+A production-grade Natural Language Processing pipeline built using PyTorch, Hugging Face Transformers (**DistilBERT**),
+and accelerated locally via NVIDIA CUDA. Designed for high accuracy and rapid text inference on customer review datasets.
 
 ---
 
@@ -16,7 +17,8 @@ Evaluated on **2,133 unseen test reviews**:
 ---
 
 ##  Pretrained Model & Artifacts
-To ensure GitHub repository size efficiency and seamless project reproducibility, the fine-tuned DistilBERT weights and tokenizer configurations are hosted directly on the Hugging Face Hub:
+To ensure GitHub repository size efficiency and seamless project reproducibility, the fine-tuned
+DistilBERT weights and tokenizer configurations are hosted directly on the Hugging Face Hub:
 
 - **Hugging Face Model Hub:** [Rexxxxxtxx/rotten-tomatoes-distilbert-sentiment](https://huggingface.co/Rexxxxxtxx/rotten-tomatoes-distilbert-sentiment)
 
