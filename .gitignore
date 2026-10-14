@@ -1,0 +1,5 @@
+my_rotten_tomatoes_model/
+results/
+__pycache__/
+.venv/
+.env
