@@ -6,7 +6,7 @@
 ## The problem
 Manually processing thousands of customer reviews, financial feedback notes, or movie comments is slow and inefficient. Organizations and platforms need automated tools to instantly categorize large volumes of text sentiment to understand user reception at scale.
 
-## What we built
+## What I built
 An end-to-end local natural language processing pipeline. A user inputs a raw review text sentence, and the system tokenizes the string, processes it through a fine-tuned deep learning transformer model, and outputs a clear binary classification label (**Positive** or **Negative**) along with an evaluation confidence score.
 
 ## How it works
