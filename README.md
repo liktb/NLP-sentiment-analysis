@@ -1,9 +1,3 @@
-Yes, adding a direct link to your Hugging Face model repository inside your GitHub `README.md` is standard practice for professional machine learning engineering. It shows judges that you understand proper artifact management and reproducibility.
-
-Here is your updated, copy-pasteable professional `README.md` containing the new **Pretrained Model & Weights** section.
-
-Open your `README.md` in VS Code, replace everything with this block, and save:
-
 ```markdown
 # Rotten Tomatoes AI Sentiment Classification Pipeline
 
