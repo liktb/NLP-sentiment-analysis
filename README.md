@@ -83,16 +83,3 @@ python test_model.py
 ##  Author
 
 * **Pipeline Architecture, Training & Execution:** [Ryan Dinto](https://github.com/liktb)
-
-```
-
----
-
-### Push the Update to GitHub:
-Run these terminal commands to update your repository live:
-```bash
-git add README.md
-git commit -m "Add Hugging Face model repository link and update project structure"
-git push origin main
-
-```
